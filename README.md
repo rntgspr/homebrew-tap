@@ -24,3 +24,19 @@ stickers fetch && stickers build && stickers install
 ```
 
 Project & source: https://github.com/rntgspr/claude-statusline-stickers
+
+### cumaru
+
+Context-oriented knowledge framework for AI-assisted work — a native CLI that
+ships one pinned, checksum-verified binary per platform (macOS ARM64/Intel,
+Linux ARM64/Intel musl).
+
+```bash
+brew install rntgspr/tap/cumaru
+brew upgrade rntgspr/tap/cumaru
+```
+
+Bare `cumaru upgrade` is blocked inside this formula; use `brew upgrade` instead.
+Models stay optional and are downloaded only by an explicit `cumaru model push`.
+
+Project & source: https://github.com/rntgspr/cumaru
