@@ -3,8 +3,8 @@ class ClaudeStatuslineStickers < Formula
 
   desc "Themed sprite-glyph font for the Claude Code statusline — a sticker per agent"
   homepage "https://github.com/rntgspr/claude-statusline-stickers"
-  url "https://github.com/rntgspr/claude-statusline-stickers/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "1881b1544fb7d5c76fcf98c54abdd08764cf37bb7797890b53b79c6ece98dd2b"
+  url "https://github.com/rntgspr/claude-statusline-stickers/archive/refs/tags/0.1.1.tar.gz"
+  sha256 "c6c48f56cb686597428f61ab5f189215e276095273785445f2ad3c9669f5ec07"
   license "MIT"
 
   depends_on "pillow"        # the PIL module, prebuilt (bottle) — no local compile
