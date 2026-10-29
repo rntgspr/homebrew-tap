@@ -40,3 +40,17 @@ Bare `cumaru upgrade` is blocked inside this formula; use `brew upgrade` instead
 Models stay optional and are downloaded only by an explicit `cumaru model push`.
 
 Project & source: https://github.com/rntgspr/cumaru
+
+### alter-bridge
+
+Durable asynchronous messaging between local LLM agent sessions (macOS client + daemon).
+
+```bash
+brew install rntgspr/tap/alter-bridge
+
+abg connect device <url> --hexid <code>
+abg config claude   # or: abg config codex
+brew services start alter-bridge
+```
+
+Project & source: https://github.com/rntgspr/alter-bridge-client
