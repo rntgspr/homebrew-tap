@@ -14,14 +14,6 @@ class AlterBridge < Formula
     pkgshare.install "native-assets", "skills", "VERSION", "SHA256SUMS"
   end
 
-  # Runs the device WebSocket daemon as a per-user LaunchAgent via brew services.
-  service do
-    run [opt_bin/"alter-bridge", "daemon", "run"]
-    keep_alive true
-    log_path var/"log/alter-bridge.log"
-    error_log_path var/"log/alter-bridge.log"
-  end
-
   # Points the user at the device pairing and native provider setup steps.
   def caveats
     <<~EOS
@@ -36,7 +28,7 @@ class AlterBridge < Formula
         #{opt_pkgshare}
 
       Start the daemon:
-        brew services start alter-bridge
+        abg daemon install
     EOS
   end
 
