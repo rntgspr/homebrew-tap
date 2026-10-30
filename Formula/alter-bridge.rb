@@ -1,8 +1,8 @@
 class AlterBridge < Formula
   desc "Durable asynchronous messaging between local LLM agent sessions"
   homepage "https://github.com/rntgspr/alter-bridge-client"
-  url "https://github.com/rntgspr/alter-bridge-client/releases/download/v0.8.0/alter-bridge-v0.8.0.zip"
-  sha256 "684614dd85f85ca751bfe486fde3cde2a1890a4459d1d58b8f36f2cce1b174bc"
+  url "https://github.com/rntgspr/alter-bridge-client/releases/download/v0.8.1/alter-bridge-v0.8.1.zip"
+  sha256 "a0d61355bc59c5f70188ce1b324c1475cf3c95706d5a8ff79c46ec1024ae8993"
 
   depends_on :macos
 
