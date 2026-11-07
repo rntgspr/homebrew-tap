@@ -5,12 +5,12 @@ class Cumaru < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/rntgspr/cumaru/releases/download/0.13.0/cumaru-aarch64-apple-darwin", using: :nounzip
-      sha256 "3ac1ba1e7f8e2de40c3fc3a86fae4f55ba4e9cf6e7194e252f9f211c23cd7c53"
+      url "https://github.com/rntgspr/cumaru/releases/download/0.13.1/cumaru-aarch64-apple-darwin", using: :nounzip
+      sha256 "83f441e74a1c3c8f6ba90b1f319d8b694a087d62c3f70edc69a5c78c43cf199d"
     end
     on_intel do
-      url "https://github.com/rntgspr/cumaru/releases/download/0.13.0/cumaru-x86_64-apple-darwin", using: :nounzip
-      sha256 "b5b1ab743530811da9e228f8bce0dbabe8e678c928f3872b74087862ada51b0c"
+      url "https://github.com/rntgspr/cumaru/releases/download/0.13.1/cumaru-x86_64-apple-darwin", using: :nounzip
+      sha256 "929c1d6fbb7fa5ef0c9df755a1db1955eba2aeca691f7bf67b48d7e4af13b21b"
     end
   end
 
@@ -19,12 +19,12 @@ class Cumaru < Formula
     depends_on "git"
 
     on_arm do
-      url "https://github.com/rntgspr/cumaru/releases/download/0.13.0/cumaru-aarch64-unknown-linux-musl", using: :nounzip
-      sha256 "b3fdde0ae163fddb51819bcab4de21180a27309eb2057fcfac58cfd486442523"
+      url "https://github.com/rntgspr/cumaru/releases/download/0.13.1/cumaru-aarch64-unknown-linux-musl", using: :nounzip
+      sha256 "9cc0c83b294eed3ec4ecb110b11d0874bbb6e402113066006b97293657ed6f98"
     end
     on_intel do
-      url "https://github.com/rntgspr/cumaru/releases/download/0.13.0/cumaru-x86_64-unknown-linux-musl", using: :nounzip
-      sha256 "df83ec21fec048656a9d2e832918a1b660e2ee27f893086dd5f41d7c4afc2226"
+      url "https://github.com/rntgspr/cumaru/releases/download/0.13.1/cumaru-x86_64-unknown-linux-musl", using: :nounzip
+      sha256 "cac1d7ca3adbfcc5f39fd8c01b325dd61144adac5ad253d3db33a7ce86daa61b"
     end
   end
 
@@ -72,7 +72,7 @@ class Cumaru < Formula
     (testpath/".cumaru/eggs.md").write "# Egg recipes\n\nBoil eggs for six minutes.\n"
     with_env(HOME: (testpath/"home").to_s) do
       output = shell_output("#{bin}/cumaru context 'look for egg recipes' 2>/dev/null")
-      assert_match(/^eggs\.md\t\d+\.\d{2}\n$/, output)
+      assert_match(/^eggs\.md:\d+,\d+\t\d+\.\d{2}\n$/, output)
       refute_path_exists testpath/"home/.cumaru"
     end
   end
