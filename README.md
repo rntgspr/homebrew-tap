@@ -2,6 +2,14 @@
 
 Personal [Homebrew](https://brew.sh) tap
 
+## Projects
+
+| Formula | Description | Source |
+|---------|-------------|--------|
+| [`alter-bridge`](#alter-bridge) | Durable asynchronous messaging between local LLM agent sessions | [rntgspr/alter-bridge-client](https://github.com/rntgspr/alter-bridge-client) |
+| [`claude-statusline-stickers`](#claude-statusline-stickers) | Themed sprite-glyph font for the Claude Code statusline | [rntgspr/claude-statusline-stickers](https://github.com/rntgspr/claude-statusline-stickers) |
+| [`cumaru`](#cumaru) | Context-oriented knowledge framework for AI-assisted work | [rntgspr/cumaru](https://github.com/rntgspr/cumaru) |
+
 ```bash
 brew tap rntgspr/tap
 brew trust rntgspr/tap
