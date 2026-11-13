@@ -1,0 +1,9 @@
+# Cumaru local cache (context vectors); comment out the next line to version it.
+.cumaru/.cache/
+
+# llm's
+.claude/
+.codex/
+.agents/
+CLAUDE.md
+AGENTS.md
