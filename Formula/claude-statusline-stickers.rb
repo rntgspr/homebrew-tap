@@ -7,9 +7,9 @@ class ClaudeStatuslineStickers < Formula
   sha256 "f763297c0249be15fb85d49664cc18a361f2d2738556e60f38509962c2694258"
   license "MIT"
 
-  depends_on "pillow"        # the PIL module, prebuilt (bottle) — no local compile
-  depends_on "python@3.13"   # the python pillow is built for; must match
   depends_on "jq"            # runtime: used by the statusline script
+  depends_on "pillow"        # the PIL module, prebuilt (bottle) — no local compile
+  depends_on "python@3.14"   # the python pillow is built for; must match
 
   resource "fonttools" do    # pure-python, installs instantly
     url "https://files.pythonhosted.org/packages/84/69/c97f2c18e0db87d2c7b15da1974dace76ae938f1cfa22e2727a648b7ed43/fonttools-4.63.0.tar.gz"
@@ -19,7 +19,7 @@ class ClaudeStatuslineStickers < Formula
   def install
     # Reuse Homebrew's prebuilt pillow via system site-packages instead of
     # compiling it; only fonttools (pure-python) goes into the venv.
-    venv = virtualenv_create(libexec, "python3.13", system_site_packages: true)
+    venv = virtualenv_create(libexec, "python3.14", system_site_packages: true)
     venv.pip_install resource("fonttools")
     venv.pip_install_and_link buildpath
   end
