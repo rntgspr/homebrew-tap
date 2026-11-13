@@ -12,6 +12,8 @@ Durable asynchronous messaging between local LLM agent sessions.
 
 - **Upstream:** [rntgspr/alter-bridge-client](https://github.com/rntgspr/alter-bridge-client) GitHub releases.
 - **Artifact:** one universal zip, `alter-bridge-v<version>.zip`. Tags use a `v` prefix.
+- **Version:** no explicit `version` field. Homebrew derives it from the URL.
+- **License:** the formula declares no `license`.
 - **Platform:** `depends_on :macos`.
 - **Install:** `bin/alter-bridge`, an `abg` symlink, and `native-assets`, `skills`, `VERSION`, `SHA256SUMS` in `pkgshare`.
 - **Caveats:** device pairing, `abg config claude|codex`, and daemon install.

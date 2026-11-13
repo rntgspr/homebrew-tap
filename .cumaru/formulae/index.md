@@ -20,7 +20,8 @@ Use `cumaru tree formulae` to navigate current entries.
 
 - You change, debug, or explain one formula.
 - You add a new formula to the tap.
+- You bump a version. Read the entity for tag prefix and artifacts, and follow `release/bump.md` for the steps.
 
 ## When NOT to use
 
-- You bump a version or update a checksum → `release/`.
+- You need the generic bump procedure or commit convention → `release/`.

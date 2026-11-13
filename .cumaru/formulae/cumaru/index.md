@@ -16,6 +16,8 @@ Context-oriented knowledge framework for AI-assisted work.
   - `cumaru-x86_64-apple-darwin`
   - `cumaru-aarch64-unknown-linux-musl`
   - `cumaru-x86_64-unknown-linux-musl`
+- **Install:** the binary goes to `libexec/cumaru`. `bin/cumaru` is a Bash wrapper that blocks `cumaru upgrade` (except `--check` and `--help`) and execs the binary.
 - **Linux:** depends on `curl` and `git`. ARM64 requires the FP16 CPU flags `fphp` and `asimdhp`.
-- **Upgrade:** bare `cumaru upgrade` is blocked. Users run `brew upgrade` instead.
+- **Upgrade:** users run `brew upgrade rntgspr/tap/cumaru`.
+- **Test:** `--version` matches the formula version, `help` lists `context`, bare `upgrade` fails with `managed by Homebrew`, and an offline `context` query ranks a fixture without creating `~/.cumaru`.
 - **Bump risk:** one version change touches four URLs and four checksums.

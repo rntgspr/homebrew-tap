@@ -15,10 +15,12 @@ targets: [meta]
 <!-- cumaru:root -->
 ## Tap domain
 
+This tag supersedes the base-domain prose below it. That prose is framework-owned and still says the domain has no pillars; ignore that statement and its `root.entities` wording. Pillars are direct children of `root` in `config.yaml`.
+
 This repository is the personal Homebrew tap `rntgspr/tap`. Stack: Homebrew formula Ruby DSL and GitHub releases.
 
 - **Pillars:** `formulae/` holds one entity per formula. `release/` holds the bump workflow.
-- **Discipline:** `formula-bump` gates every formula version or checksum change.
+- **Disciplines:** `cumaru-first` and `formula-bump`. `formula-bump` gates every `Formula/*.rb` change.
 - **Entry:** for work on one formula, load `formulae/<name>/index.md`. For a bump, also load `release/bump.md`.
 - **Commits:** `chore: update <name> to <version> [<agent_name>]`, one formula per commit.
 <!-- /cumaru:root -->
