@@ -58,7 +58,7 @@ brew install rntgspr/tap/alter-bridge
 
 abg connect device <url> --hexid <code>
 abg config claude   # or: abg config codex
-brew services start alter-bridge
+abg daemon install
 ```
 
 Project & source: https://github.com/rntgspr/alter-bridge-client
